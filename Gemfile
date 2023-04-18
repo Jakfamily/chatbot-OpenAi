@@ -15,3 +15,5 @@ gem 'dotenv'
 gem 'http'
 
 gem'json'
+
+gem 'twitter'
