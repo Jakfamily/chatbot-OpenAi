@@ -4,7 +4,8 @@ require 'json'
 require 'dotenv'
 
 Dotenv.load('.env')
-
+def login_openai 
+  
 # création de la clé d'api et indication de l'url utilisée.
 api_key = ENV["OPENAI_API_KEY"]
 url = "https://api.openai.com/v1/engines/text-babbage-001/completions"
@@ -29,8 +30,8 @@ data = {
 # - puis de récupéré la réponse puis de séléctionner spécifiquement le texte rendu
 response = HTTP.post(url, headers: headers, body: data.to_json)
 response_body = JSON.parse(response.body.to_s)
-response_string = response_body['choices'][0]['text'].strip
-
+# response_string = response_body['choices'][0]['text'].strip
+end
 # ligne qui permet d'envoyer l'information sur ton terminal
 puts "Voici 5 parfums de glace :"
-puts response_string
+puts login_openai

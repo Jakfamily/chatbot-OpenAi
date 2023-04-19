@@ -17,3 +17,5 @@ gem 'http'
 gem'json'
 
 gem 'twitter'
+
+gem 'faker'
